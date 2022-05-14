@@ -16,10 +16,10 @@ class CategoryPermissionSeeder extends Seeder
 	public function run()
 	{
 		DB::table('permissions')->insert([
-			['name' => PermissionEnum::CAN_SEE_ALL_CATEGORIES, 'guard_name' => 'web'],
-			['name' => PermissionEnum::CAN_CREATE_CATEGORY, 'guard_name' => 'web'],
-			['name' => PermissionEnum::CAN_UPDATE_CATEGORY, 'guard_name' => 'web'],
-			['name' => PermissionEnum::CAN_DELETE_CATEGORY, 'guard_name' => 'web'],
+			['name' => PermissionEnum::SEE_ALL_CATEGORIES, 'guard_name' => 'web'],
+			['name' => PermissionEnum::CREATE_CATEGORY, 'guard_name' => 'web'],
+			['name' => PermissionEnum::UPDATE_CATEGORY, 'guard_name' => 'web'],
+			['name' => PermissionEnum::DELETE_CATEGORY, 'guard_name' => 'web'],
 		]);
 	}
 }

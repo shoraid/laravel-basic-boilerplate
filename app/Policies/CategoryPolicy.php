@@ -19,7 +19,7 @@ class CategoryPolicy
 	 */
 	public function viewAny(User $user)
 	{
-		return $user->can(PermissionEnum::CAN_SEE_ALL_CATEGORIES);
+		return $user->can(PermissionEnum::SEE_ALL_CATEGORIES);
 	}
 
 	/**
@@ -42,7 +42,7 @@ class CategoryPolicy
 	 */
 	public function create(User $user)
 	{
-		return $user->can(PermissionEnum::CAN_CREATE_CATEGORY);
+		return $user->can(PermissionEnum::CREATE_CATEGORY);
 	}
 
 	/**
@@ -54,7 +54,7 @@ class CategoryPolicy
 	 */
 	public function update(User $user, Category $category)
 	{
-		return $user->can(PermissionEnum::CAN_UPDATE_CATEGORY);
+		return $user->can(PermissionEnum::UPDATE_CATEGORY);
 	}
 
 	/**
@@ -66,7 +66,7 @@ class CategoryPolicy
 	 */
 	public function delete(User $user, Category $category)
 	{
-		return $user->can(PermissionEnum::CAN_DELETE_CATEGORY);
+		return $user->can(PermissionEnum::DELETE_CATEGORY);
 	}
 
 	/**

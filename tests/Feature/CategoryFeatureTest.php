@@ -34,7 +34,7 @@ class CategoryFeatureTest extends TestCase
 	/** @test */
 	public function authorized_user_can_see_all_categories()
 	{
-		$this->user->givePermissionTo(PermissionEnum::CAN_SEE_ALL_CATEGORIES);
+		$this->user->givePermissionTo(PermissionEnum::SEE_ALL_CATEGORIES);
 
 		$response = $this
 			->actingAs($this->user)
@@ -50,7 +50,7 @@ class CategoryFeatureTest extends TestCase
 	/** @test */
 	public function authorized_user_can_visit_create_category_page()
 	{
-		$this->user->givePermissionTo(PermissionEnum::CAN_CREATE_CATEGORY);
+		$this->user->givePermissionTo(PermissionEnum::CREATE_CATEGORY);
 
 		$response = $this
 			->actingAs($this->user)
@@ -64,7 +64,7 @@ class CategoryFeatureTest extends TestCase
 	/** @test */
 	public function authorized_user_can_add_new_category()
 	{
-		$this->user->givePermissionTo(PermissionEnum::CAN_CREATE_CATEGORY);
+		$this->user->givePermissionTo(PermissionEnum::CREATE_CATEGORY);
 
 		$response = $this
 			->actingAs($this->user)
@@ -80,7 +80,7 @@ class CategoryFeatureTest extends TestCase
 	/** @test */
 	public function authorized_user_can_visit_edit_category_page()
 	{
-		$this->user->givePermissionTo(PermissionEnum::CAN_UPDATE_CATEGORY);
+		$this->user->givePermissionTo(PermissionEnum::UPDATE_CATEGORY);
 
 		$response = $this
 			->actingAs($this->user)
@@ -95,7 +95,7 @@ class CategoryFeatureTest extends TestCase
 	/** @test */
 	public function authorized_user_can_update_category()
 	{
-		$this->user->givePermissionTo(PermissionEnum::CAN_UPDATE_CATEGORY);
+		$this->user->givePermissionTo(PermissionEnum::UPDATE_CATEGORY);
 
 		$response = $this
 			->actingAs($this->user)
@@ -111,7 +111,7 @@ class CategoryFeatureTest extends TestCase
 	/** @test */
 	public function authorized_user_can_delete_category()
 	{
-		$this->user->givePermissionTo(PermissionEnum::CAN_DELETE_CATEGORY);
+		$this->user->givePermissionTo(PermissionEnum::DELETE_CATEGORY);
 
 		$response = $this
 			->actingAs($this->user)
