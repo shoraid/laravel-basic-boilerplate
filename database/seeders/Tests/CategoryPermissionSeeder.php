@@ -17,6 +17,7 @@ class CategoryPermissionSeeder extends Seeder
 	{
 		DB::table('permissions')->insert([
 			['name' => PermissionEnum::SEE_ALL_CATEGORIES, 'guard_name' => 'web'],
+			['name' => PermissionEnum::SEE_SELECTED_CATEGORY, 'guard_name' => 'web'],
 			['name' => PermissionEnum::CREATE_CATEGORY, 'guard_name' => 'web'],
 			['name' => PermissionEnum::UPDATE_CATEGORY, 'guard_name' => 'web'],
 			['name' => PermissionEnum::DELETE_CATEGORY, 'guard_name' => 'web'],

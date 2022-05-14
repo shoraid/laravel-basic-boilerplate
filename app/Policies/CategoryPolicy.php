@@ -31,7 +31,7 @@ class CategoryPolicy
 	 */
 	public function view(User $user, Category $category)
 	{
-		//
+		return $user->can(PermissionEnum::SEE_SELECTED_CATEGORY);
 	}
 
 	/**

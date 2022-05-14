@@ -6,6 +6,7 @@ class PermissionEnum
 {
 	// Categories
 	const SEE_ALL_CATEGORIES = 'See all categories';
+	const SEE_SELECTED_CATEGORY = 'See selected category';
 	const CREATE_CATEGORY = 'Create category';
 	const UPDATE_CATEGORY = 'Update category';
 	const DELETE_CATEGORY = 'Delete category';

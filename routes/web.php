@@ -11,7 +11,7 @@ Route::get('/', function () {
 Route::prefix('cms')
 	->name('cms.')
 	->group(function () {
-		Route::resource('categories', CategoryController::class)->except('show');
+		Route::resource('categories', CategoryController::class);
 
 		Route::resource('tags', TagController::class);
 	});

@@ -78,6 +78,21 @@ class CategoryFeatureTest extends TestCase
 	}
 
 	/** @test */
+	public function authorized_user_can_see_selected_category()
+	{
+		$this->user->givePermissionTo(PermissionEnum::SEE_SELECTED_CATEGORY);
+
+		$response = $this
+			->actingAs($this->user)
+			->get("/cms/categories/{$this->category->id}");
+
+		$response
+			->assertStatus(200)
+			->assertViewIs('cms.categories.show')
+			->assertViewHas('category');
+	}
+
+	/** @test */
 	public function authorized_user_can_visit_edit_category_page()
 	{
 		$this->user->givePermissionTo(PermissionEnum::UPDATE_CATEGORY);
