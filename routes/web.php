@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CMS\CategoryController;
+use App\Http\Controllers\CMS\TagController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,4 +12,6 @@ Route::prefix('cms')
 	->name('cms.')
 	->group(function () {
 		Route::resource('categories', CategoryController::class)->except('show');
+
+		Route::resource('tags', TagController::class);
 	});

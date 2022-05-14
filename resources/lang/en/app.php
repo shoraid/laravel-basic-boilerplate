@@ -9,6 +9,14 @@ return [
 		]
 	],
 
+	// Tags
+	'tags' => [
+		'name' => 'Tag Name',
+		'placeholders' => [
+			'name' => 'Flash Sale'
+		]
+	],
+
 	// Common
 	'common' => [
 		'actions' => 'Actions',
